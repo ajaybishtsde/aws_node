@@ -8,6 +8,13 @@ const PORT = process.env.PORT || 5555;
 
 app.use(express.json());
 
+app.get("/test", (req, res) => {
+  res.json({
+    status: true,
+    message: "Connected and working...",
+  });
+});
+
 app.get("/", (req, res) => {
   res.json({
     status: true,
